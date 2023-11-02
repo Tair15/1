@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Visualization Example</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1>Example Bar Chart</h1>
+    <canvas id="myChart"></canvas>
+
+    <style>
+        /* Define the width and height of the chart using CSS */
+        #myChart {
+            width: 300px !important; /* Adjust to the desired width */
+            height: auto !important;
+        }
+    </style>
+
+    <script>
+        // Get the canvas element
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+        // Data for the chart
+        const data = {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: 'Sample Bar Chart',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        // Chart configuration
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                // Additional configuration options (if required)
+            }
+        };
+
+        // Create the chart
+        const myChart = new Chart(ctx, config);
+    </script>
+</body>
+
+</html>

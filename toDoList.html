@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MFA MEBEl</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/2aba850fd9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  </head>
+  <body class="toDoPage">
+    <!-- ======= Header ======= -->
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="index.html">Mfa Mebel</a></div>
+        <ul class="links">
+          <li><a href="#about">О нас</a></li>
+          <li><a href="team.html#team"> Наша команда</a></li>
+          <li><a href="#footer">Контакты</a></li>
+          <li><a href="contactUs.html">Свяжитесь с нами</a></li>
+          <li><a href="toDoList.html">Ваши желания</a></li>
+        </ul>
+        <a
+          href="https://www.instagram.com/mfa_mebel/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+          class="action_btn"
+          >Instagram</a
+        >
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+    <div class="dropdown_menu">
+      <li>
+        <a href="index.html#about">О нас</a>
+      </li>
+      <li>
+        <a href="team.html#team"> Наша команда</a>
+      </li>
+      <li>
+        <a href="#footer">Контакты</a>
+      </li>
+      <li>
+        <a href="contactUs.html">Свяжитесь с нами</a>
+      </li>
+
+      <li>
+        <a href="toDoList.html">Ваши желания</a>
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/mfa_mebel/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+          class="action_btn"
+          >Instagram</a
+        >
+      </li>
+    </div>
+    <!-- =======End Header ======= -->
+    <!-- ======= Hero ======= -->
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+      <div class="containter w-75" id="toDoList_timer">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-6" id="countDown">
+            <h2 style="text-align: center">сможете уложится в 5 минут?</h2>
+            <div class="timerSection justify-content-center row">
+              <div class="timerBlock days col-md-3 text-center">
+                <label for="days">Дней</label>
+
+                <input
+                  type="number"
+                  id="days"
+                  placeholder="0"
+                  autocomplete="off"
+                  min="0"
+                  class="text-center"
+                />
+              </div>
+              <div class="timerBlock hours col-md-3 text-center">
+                <label for="hours">Часов</label>
+                <input
+                  type="number"
+                  id="hours"
+                  placeholder="0"
+                  autocomplete="off"
+                  min="0"
+                  max="24"
+                  class="text-center"
+                />
+              </div>
+              <div class="timerBlock minutes col-md-3 text-center">
+                <label for="minutes">Минут</label>
+                <input
+                  type="number"
+                  id="minutes"
+                  placeholder="0"
+                  autocomplete="off"
+                  min="0"
+                  max="60"
+                  class="text-center"
+                />
+              </div>
+              <div class="timerBlock seconds col-md-3 text-center">
+                <label for="seconds">Секунд</label>
+                <input
+                  type="number"
+                  id="seconds"
+                  placeholder="0"
+                  autocomplete="off"
+                  min="0"
+                  max="60"
+                  class="text-center"
+                />
+              </div>
+            </div>
+            <button
+              id="startCountdownButton"
+              class="btn btn-primary mt-3"
+              onclick="startCountdown()"
+            >
+              Начать отсчет
+            </button>
+          </div>
+
+          <div class="toDoList col-lg-6 col-md-6">
+            <h2 style="text-align: center">
+              Запишите ваши планы что бы не забыть
+            </h2>
+            <div class="fixed" id="newtask">
+              <div class="input-group mb-3">
+                <input
+                  id="inputText"
+                  type="text"
+                  class="form-control"
+                  aria-label="Default"
+                  aria-describedby="inputGroup-sizing-default"
+                />
+                <div class="input-group-prepend">
+                  <button
+                    id="push inputGroup-sizing-default"
+                    class="btn btn-primary"
+                    onclick="newElementToDoList()"
+                  >
+                    Добавить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="ulList">
+              <ul id="list">
+                <li>Сделать ремонт</li>
+                <li class="checked">Купить машину</li>
+                <li>Выйграть лотерею</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/main.js"></script>
+    <!-- ======= End Hero ======= -->
+  </body>
+</html>
